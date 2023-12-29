@@ -6,7 +6,7 @@ public class NewsRunner {
 
     public static void main(String[] args) {
         NewsApi newsApi = new NewsApi();
-        //newsApi.testRequest();
+        newsApi.testRequest();
         String topic = JOptionPane.showInputDialog("Please enter a topic for a news story");
         String story = newsApi.findStory(topic);
         System.out.println(story);

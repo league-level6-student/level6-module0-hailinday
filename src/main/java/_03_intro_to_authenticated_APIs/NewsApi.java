@@ -56,7 +56,7 @@ public class NewsApi {
 
         String response = stringMono.block();
 
-        System.out.println(response);
+       System.out.println(response);
     }
 
     public ApiExampleWrapper getNewsStoryByTopic(String topic) {
