@@ -68,7 +68,7 @@ public class NewsApi {
                         .build())
                 .retrieve()
                 .bodyToMono(ApiExampleWrapper.class);
-
+       
         return apiExampleWrapperMono.block();
     }
 
