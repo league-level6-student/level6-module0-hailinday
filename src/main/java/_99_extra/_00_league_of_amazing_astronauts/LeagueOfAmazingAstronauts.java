@@ -5,9 +5,10 @@ import _99_extra._00_league_of_amazing_astronauts.models.Rocketship;
 
 public class LeagueOfAmazingAstronauts {
 
-    Rocketship rocketship = new Rocketship();
+    Rocketship rocketship;
 
-    public LeagueOfAmazingAstronauts() {
+    public LeagueOfAmazingAstronauts(Rocketship rocketship) {	
+    	this.rocketship = rocketship;
     }
 
     public void prepareAstronaut(Astronaut astronaut){
@@ -16,7 +17,7 @@ public class LeagueOfAmazingAstronauts {
     }
 
     public void launchRocket(String destination){
-        if(rocketship.isLoaded()) {
+        if(!rocketship.isLoaded()) {
             int milesToDesination = 0;
             if (destination.equals("Mars")) {
                 milesToDesination = 68_000_000;

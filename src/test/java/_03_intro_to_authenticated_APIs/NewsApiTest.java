@@ -71,10 +71,17 @@ class NewsApiTest {
     void itShouldFindStory(){
         //given
     	String topic = "grill";
+        String articleTitle = grill.getTitle();
+        String articleContent = grill.getContent();
+        String articleUrl = grill.getUrl();
+    	String message =
+    				articleTitle + " -\n"
+                        + articleContent
+                        + "\nFull article: " + articleUrl;
         //when
-    	newsApi.getNewsStoryByTopic(topic);
+    	String story = newsApi.findStory(topic);
         //then
-    	
+    	assertEquals(story,message);
     }
 
 
